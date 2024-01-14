@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<div class="personal-card">
+  <h4>{title}</h4>
+  <p>{body}</p>
+</div>
+
+<style>
+  .personal-card {
+    border: 1px solid aqua;
+    box-shadow: 2px 2px 1.75px #050404;
+    padding: 10px;
+  }
+  h4 {
+    color: #000000;
+    font-weight: bold;
+  }
+  p {
+    text-align: justify;
+    color: #003b6e;
+  }
+</style>

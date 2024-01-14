@@ -1,0 +1,41 @@
+<h1>Login</h1>
+<form id="loginForm">
+  <label>
+    Username:
+    <input
+      type="text"
+      name="username"
+      required
+    />
+  </label>
+  <label>
+    Email:
+    <input
+      type="email"
+      name="email"
+      required
+    />
+  </label>
+  <label>
+    Password:
+    <input
+      type="password"
+      name="password"
+      required
+      minlength="6"
+    />
+  </label>
+  <button type="submit">Login</button>
+</form>
+<script>
+  const form = document.getElementById("loginForm") as HTMLFormElement;
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    for (let [name, value] of formData) {
+      console.log(`${name}: ${value}`);
+    }
+  });
+</script>
