@@ -1,5 +1,8 @@
 <h1>Login</h1>
-<form id="loginForm">
+<form
+  id="loginForm"
+  class="flex flex-col gap-5 items-start justify-start w-full max-w-lg"
+>
   <label>
     Username:
     <input
@@ -25,7 +28,11 @@
       minlength="6"
     />
   </label>
-  <button type="submit">Login</button>
+  <button
+    type="submit"
+    class="bg-black p-2 text-white"
+    >Login</button
+  >
 </form>
 <script>
   const form = document.getElementById("loginForm") as HTMLFormElement;
